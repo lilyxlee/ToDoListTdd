@@ -1,2 +1,2 @@
-# hibernateEmbeddedDB
-Test Hibernate with Embedded DB
+# ToDoList with TDD
+My personal pure Test Driven Development project
