@@ -12,15 +12,13 @@ public class Item {
         this.description = description;
     }
 
-    //TODO: check if the overrides are correct.
     @Override
     public boolean equals(Object obj) {
         if (obj == this)
             return true;
-        if (obj instanceof Item)
-           return  (((Item) obj).getDescription().equals(description)) ? true : false ;
-
-        return false;
+        if (!(obj instanceof Item))
+            return false;
+        return  (((Item) obj).getDescription().equals(description)) ? true : false ;
     }
 
     @Override
