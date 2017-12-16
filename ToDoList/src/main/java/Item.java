@@ -23,6 +23,6 @@ public class Item {
 
     @Override
     public int hashCode() {
-        return super.hashCode() + description.hashCode();
+        return description.hashCode();
     }
 }

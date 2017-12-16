@@ -25,6 +25,7 @@ public class TestItem {
         item2.setDescription(desc);
 
         assertTrue(item1.equals(item2));
+        assertTrue(item1.hashCode() == item2.hashCode());
     }
 
 }
