@@ -3,6 +3,7 @@
  */
 public class Item {
     private String description;
+    private boolean done;
 
     public String getDescription() {
         return description;
@@ -24,5 +25,13 @@ public class Item {
     @Override
     public int hashCode() {
         return description.hashCode();
+    }
+
+    public void setDone() {
+        done = true;
+    }
+
+    public boolean isDone() {
+        return done;
     }
 }

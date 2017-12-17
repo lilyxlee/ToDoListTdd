@@ -25,10 +25,35 @@ public class TestToDoList {
     }
 
     @Test
+    public void testGetListSize(){
+        Item item1 = new Item();
+        list.addItem(item1);
+        assertEquals(1, list.getSize());
+    }
+
+
+    @Test
     public void testAddAndGetItem(){
-        Item item = new Item();
-        list.addItem(item);
-        assertTrue(item.equals(list.getItem(0)));
+        Item item1 = new Item();
+        list.addItem(item1);
+        assertTrue(item1.equals(list.getItem(0)));
+
+        Item item2 = new Item();
+        list.addItem(item2);
+        assertTrue(item2.equals(list.getItem(1)));
+    }
+
+    @Test
+    public void testDeleteByIndex(){
+        Item item1 = new Item();
+        list.addItem(item1);
+        list.deleteItem(0);
+        assertEquals(0, list.getSize());
+    }
+
+    @Test(expected = CannotDeleteFromEmptyList.class)
+    public void testCannotDeleteFromEmptyList(){
+        list.deleteItem(0);
     }
 
 }

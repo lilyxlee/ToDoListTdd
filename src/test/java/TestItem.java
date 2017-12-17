@@ -28,4 +28,12 @@ public class TestItem {
         assertTrue(item1.hashCode() == item2.hashCode());
     }
 
+    @Test
+    public void testTtemMarkedAsDone(){
+        Item item = new Item();
+        item.setDescription(desc);
+        item.setDone();
+        assertTrue(item.isDone());
+    }
+
 }

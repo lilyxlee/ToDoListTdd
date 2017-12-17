@@ -24,4 +24,17 @@ public class ToDoList {
     public Item getItem(int index) {
         return listOfItems.get(index);
     }
+
+    public int getSize() {
+        return listOfItems.size();
+    }
+
+    public void deleteItem(int index) {
+        if (listOfItems.isEmpty())
+            throw new CannotDeleteFromEmptyList();
+        listOfItems.remove(index);
+    }
+
+
 }
+
