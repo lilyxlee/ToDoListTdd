@@ -1,2 +1,2 @@
-# ToDoList with TDD
-My personal pure Test Driven Development project
+# Spring Boot ToDo List project
+A simple Spring Boot ToDo list project
